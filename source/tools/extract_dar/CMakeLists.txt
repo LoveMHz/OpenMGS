@@ -1,12 +1,9 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 2.6)
 
-# Project's name
-project(extract_dar)
+add_subdirectory(./../../lib_metalgearsolid_pc metalgearsolid_pc)
 
-# Set the output folder where your program will be created
-set(CMAKE_BINARY_DIR ${CMAKE_SOURCE_DIR}../../bin)
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+include_directories(${SHARED_LIB_INCLUDE_DIR})
 
-# The following folder will be included
-include_directories("${PROJECT_SOURCE_DIR}")
+set(SRCS src/extract_dar.c)
+add_executable(extract_dar ${SRCS})
+target_link_libraries(extract_dar metalgearsolid_pc)
