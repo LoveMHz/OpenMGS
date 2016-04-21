@@ -8,3 +8,6 @@ install_manifest.txt
 
 # Compiled libs
 *.a
+
+# Compiled
+bin
