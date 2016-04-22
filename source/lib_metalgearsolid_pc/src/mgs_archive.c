@@ -64,8 +64,6 @@ struct DAR_ARCHIVE *openArchive(char *filename) {
            archive->entries[entry_index].size, index_offset);
   }
 
-  //  struct DAR_ARCHIVE *archive = malloc(sizeof(struct DAR_ARCHIVE));
-
   fclose(file);
 
   printf("Opening Archive Count: %d Filesize: %d\n", archive->count,
